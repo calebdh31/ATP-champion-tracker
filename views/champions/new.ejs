@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Champion</title>
 </head>
 <body>
-    
+    <%- include("../partials/nav") %>
+    <h1>Add new champion</h1>
+    <form action="/champions" method="POST">
+        <label for="tournament">Tournament</label>
+        <input type="text" name="tournament" id="tournament">
+        <label for="level">Level</label>
+        <select name="level" id="level">
+            <option value="Grand Slam">Grand Slam</option>
+            <option value="ATP Masters 1000">ATP Masters 1000</option>
+            <option value="ATP 500">ATP 500</option>
+            <option value="ATP 250">ATP 250</option>
+        </select>
+        <label for="year">Year</label>
+        <input type="number" name="year" id="year">
+        <label for="champion">Champion</label>
+        <input type="text" name="champion" id="champion">
+        <label for="finalScore" name="finalScore" id="finalScore">Final Score</label>
+        <input type="text" name="finalScore" id="finalScore">
+        <button type="submit">Submit Result</button>
+    </form>
 </body>
 </html>

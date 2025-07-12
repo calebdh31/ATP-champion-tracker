@@ -2,7 +2,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 const express = require("express")
 const app = express()
-const authController = require("./controllers/auth.js")
+
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")
 const morgan = require("morgan")
@@ -22,6 +22,11 @@ app.use(morgan('dev'))
 
 //ROUTES
 
+const authController = require("./controllers/auth.js")
+const championController = require("./controllers/champion")
+app.use("/champions", championController)
+app.use("/auth", authController)
+
 // GET /results - Display all tournament results
 // GET /results/new - Show a form to create a new result
 // POST /results - Take form data and add it to the database
@@ -33,12 +38,6 @@ app.use(morgan('dev'))
 app.get("/", (req, res) => {
     res.render("index.ejs")
 })
-
-app.get("/champions", (req, res) => {
-    
-})
-
-app.use("/auth", authController)
 
 app.listen(port, () => {
   console.log(`The ATP Champion Tracker app is ready on port ${port}!`)

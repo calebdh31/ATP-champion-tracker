@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Champions</title>
 </head>
 <body>
-    
+    <%- include("../partials/nav") %>
+    <h1>ATP Champions</h1>
+    <% champions.forEach(c => { %>
+        <li>
+            <a href="/champions/<%= c._id %>">
+                <%= c.tournament %> <%= c.year %> - <%= c.champion %>
+            </a>
+        </li>
+   <% }) %>
 </body>
 </html>

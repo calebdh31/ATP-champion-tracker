@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include("../partials/nav") %>
+    <form action="/champions/<%= champion._id %>?_method=PUT" method="POST">
+        <label for="tournament">Tournament</label>
+        <input type="text" name="tournament" id="tournament" value="<%= champion.tournament %>">
+
+        <label for="level">Level</label>
+        <select name="level" id="level">
+            <option value="Grand Slam" <%= champion.level === "Grand Slam" ? "selected" : "" %>>Grand Slam</option>
+            <option value="ATP Masters 1000" <%= champion.level === "ATP Masters 1000" ? "selected" : "" %>>ATP Masters 1000</option>
+            <option value="ATP 500" <%= champion.level === "ATP 500" ? "selected" : "" %>>ATP 500</option>
+            <option value="ATP 250" <%= champion.level === "ATP 250" ? "selected" : "" %>>ATP 250</option>
+        </select>
+
+        <label for="year">Year</label>
+        <input type="number" name="year" id="year" value="<%= champion.year %>">
+
+        <label for="champion">Champion</label>
+        <input type="text" name="champion" id="champion" value="<%= champion.champion %>">
+
+        <label for="finalScore" name="finalScore" id="finalScore">Final Score</label>
+        <input type="text" name="finalScore" id="finalScore" value="<%= champion.finalScore %>">
+
+        <button type="submit">Update Champion</button>
+    </form>
 </body>
+
 </html>
