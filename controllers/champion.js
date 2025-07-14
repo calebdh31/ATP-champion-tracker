@@ -12,6 +12,7 @@ router.get("/new", (req, res) => {
 })
 router.post("/", async (req, res) => {
     console.log("Form Submission:", req.body)
+    req.body.creator = req.session.user._id
     try {
         await Champion.create(req.body)
         res.redirect("/champions")
@@ -56,7 +57,5 @@ router.delete("/:id", async (req, res) => {
         res.send("Error deleting champion")
     }
 })
-router.post("/sign-in", async (req, res) => {
-    res.render()
-})
+
 module.exports = router

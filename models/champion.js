@@ -9,8 +9,8 @@ const championSchema = new mongoose.Schema({
     },
     year: { type: Number, required: true },
     champion: { type: String, required: true },
-    finalScore: { type: String, required: true }
+    finalScore: { type: String, required: true },
+    creator: { ref: "User", type: mongoose.Types.ObjectId }
 })
  module.exports = mongoose.model("Champion", championSchema)
 
- 

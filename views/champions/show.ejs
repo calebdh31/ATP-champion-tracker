@@ -14,9 +14,12 @@
     <p><strong>Final Score:</strong> <%= champion.finalScore %></p>
 
     <a href="/champions">Back</a>
-    <a href="/champions/<%= champion._id %>/edit">Edit</a>
+    <% if (user._id === champion.creator) { %>
+ <a href="/champions/<%= champion._id %>/edit">Edit</a>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
+    <% } %>
+   
 </body>
 </html>
