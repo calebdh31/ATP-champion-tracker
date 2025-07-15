@@ -4,5 +4,9 @@
   <a href="/Home">Home</a> |
   <a href="/champions">All Champions</a> |
   <a href="/champions/new">Add New Champion</a>
+  <% if (user) { %>
+    <a href="/champions/mine">My Champions</a>
+    <a href="/auth/sign-out">Sign out</a>
+ <% } %>
 </nav>
 <hr>

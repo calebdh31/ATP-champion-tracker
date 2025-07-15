@@ -21,6 +21,10 @@ router.post("/", async (req, res) => {
         res.send("Error creating champion entry")
     }
 })
+router.get("/mine", async (req, res) => {
+    const myChampions = await Champion.find({ creator: req.session.user._id })
+    res.render("champions/mine.ejs", { champions: myChampions })
+})
 router.get("/:id", async (req, res) => {
     try {
         const champion = await Champion.findById(req.params.id)

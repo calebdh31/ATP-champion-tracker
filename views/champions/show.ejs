@@ -9,6 +9,7 @@
 </head>
 <body>
     <%- include("../partials/nav") %>
+    <div class="champions-drill-card">
     <h1><%= champion.tournament %></h1>
     <p><strong>Champion:</strong> <%= champion.champion %></p>
     <p><strong>Year:</strong> <%= champion.year %></p>
@@ -16,12 +17,13 @@
     <p><strong>Final Score:</strong> <%= champion.finalScore %></p>
 
     <a href="/champions">Back</a>
+    
     <% if (user && user._id && user._id.toString() === champion.creator.toString()) { %>
  <a href="/champions/<%= champion._id %>/edit">Edit</a>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
     <% } %>
-   
+   </div>
 </body>
 </html>

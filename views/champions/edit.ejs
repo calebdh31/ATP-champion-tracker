@@ -10,6 +10,7 @@
 </head>
 <body>
     <%- include("../partials/nav") %>
+    <div class="form-container">
     <form action="/champions/<%= champion._id %>?_method=PUT" method="POST">
         <label for="tournament">Tournament</label>
         <input type="text" name="tournament" id="tournament" value="<%= champion.tournament %>">
@@ -33,6 +34,7 @@
 
         <button type="submit">Update Champion</button>
     </form>
+    </div>
 </body>
 
 </html>

@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Champions</title>
+    <title>Your Champions</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include("../partials/nav") %>
-    <h1>ATP Champions</h1>
+    <h1>Your Champions</h1>
     <div class="champions-container">
     <% champions.forEach(c => { %>
-        <div class="champion-card">
-            <a href="/champions/<%= c._id %>">
-                <%= c.tournament %> <%= c.year %> - <%= c.champion %>
-            </a>
-        </div>
-   <% }) %>
-   </div>
+    <div class="champion-card">
+   <a href="/champions/<%= c._id %>">
+    <%= c.tournament %> <%= c.year %> - <%= c.champion %>
+    </a>
+    </div>
+<% }) %>
+</div>
+
 </body>
 </html>

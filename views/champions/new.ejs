@@ -9,7 +9,8 @@
 </head>
 <body>
     <%- include("../partials/nav") %>
-    <h1>Add new champion</h1>
+    <h1>Add New Champion</h1>
+    <div class="form-container">
     <form action="/champions" method="POST">
         <label for="tournament">Tournament</label>
         <input type="text" name="tournament" id="tournamen" placeholder="Tournament">
@@ -28,5 +29,6 @@
         <input type="text" name="finalScore" id="finalScore" placeholder="Final Score">
         <button type="submit">Submit Result</button>
     </form>
+    </div>
 </body>
 </html>
