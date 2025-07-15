@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Champion</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include("../partials/nav") %>
     <h1>Add new champion</h1>
     <form action="/champions" method="POST">
         <label for="tournament">Tournament</label>
-        <input type="text" name="tournament" id="tournament">
+        <input type="text" name="tournament" id="tournamen" placeholder="Tournament">
         <label for="level">Level</label>
         <select name="level" id="level">
             <option value="Grand Slam">Grand Slam</option>
@@ -19,11 +21,11 @@
             <option value="ATP 250">ATP 250</option>
         </select>
         <label for="year">Year</label>
-        <input type="number" name="year" id="year">
+        <input type="number" name="year" id="year" placeholder="Year">
         <label for="champion">Champion</label>
-        <input type="text" name="champion" id="champion">
+        <input type="text" name="champion" id="champion" placeholder="Champion">
         <label for="finalScore" name="finalScore" id="finalScore">Final Score</label>
-        <input type="text" name="finalScore" id="finalScore">
+        <input type="text" name="finalScore" id="finalScore" placeholder="Final Score">
         <button type="submit">Submit Result</button>
     </form>
 </body>

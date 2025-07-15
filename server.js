@@ -17,6 +17,7 @@ mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
 })
 // Middlewares
+app.use(express.static("public"))
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method"))
 app.use(morgan('dev'))

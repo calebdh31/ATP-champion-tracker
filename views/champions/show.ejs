@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= champion.tournament %> - <%= champion.champion %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include("../partials/nav") %>
@@ -14,7 +16,7 @@
     <p><strong>Final Score:</strong> <%= champion.finalScore %></p>
 
     <a href="/champions">Back</a>
-    <% if (user._id === champion.creator) { %>
+    <% if (user && user._id && user._id.toString() === champion.creator.toString()) { %>
  <a href="/champions/<%= champion._id %>/edit">Edit</a>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
