@@ -1,12 +1,14 @@
 
 <link rel="stylesheet" href="/css/style.css">
 <nav>
-  <a href="/Home">Home</a> |
-  <a href="/champions">All Champions</a> |
-  <a href="/champions/new">Add New Champion</a>
-  <% if (user) { %>
-    <a href="/champions/mine">My Champions</a>
-    <a href="/auth/sign-out">Sign out</a>
- <% } %>
+  <div class="nav-links">
+    <a href="/home">Home</a>
+    <a href="/champions">All Champions</a>
+    <a href="/champions/new">Add New Champion</a>
+    <% if (user) { %>
+      <a href="/champions/mine">My Champions</a>
+      <a href="/auth/sign-out">Sign out</a>
+    <% } %>
+  </div>
 </nav>
 <hr>

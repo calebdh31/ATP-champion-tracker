@@ -19,15 +19,6 @@ body {
     min-height: 100vh;
 }
 
-.container {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
-    background: white;
-    border-radius: 9px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
 h1, h2 {
     font-weight: 600;
     color: #091a16;
@@ -155,7 +146,6 @@ nav a:hover {
     padding: 2rem 3rem;
 }
 .home-container h1, h2 {
-    text-shadow: 1px 1px 2px rgb(214, 198, 23);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 2rem 3rem;
     font-size: 32px;
@@ -163,9 +153,9 @@ nav a:hover {
     background: none;
 }
 .home-container ul, p, li {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 2px #ffffff;
+    text-shadow: 1px 1px 2px #1d1818;
     font-size: 28px;
 }
 .champions-container {
