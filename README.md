@@ -56,7 +56,7 @@
 
 I wanted my project to be based on something I am interested in and would have fun making improvements on to sharpen my skills. 
 
-The app has full CRUD functionality giving the user the ability
+The app has full CRUD functionality giving the user the ability to create, read, update, and delete champion cards from ATP tournament results.
 
 The app is designed so that only users have access to any content. I did this for simplicity mostly but also wanted it to function with sign up/sign in requirements.
 
