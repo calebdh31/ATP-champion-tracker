@@ -52,7 +52,7 @@
 
 ## About The Project
 
-[![ATP Champion Tracker Screenshot][ATP-Champion-Tracker-Screenshot]](https://imgur.com/a/HcquQKE)
+[ATP-Champion-Tracker-Screenshot]: https://link-to-your-image.png
 
 I wanted my project to be based on something I am interested in and would have fun making improvements on to sharpen my skills. 
 
