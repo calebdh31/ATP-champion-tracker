@@ -56,6 +56,8 @@
 
 I wanted my project to be based on something I am interested in and would have fun making improvements on to sharpen my skills. 
 
+The app has full CRUD functionality giving the user the ability
+
 The app is designed so that only users have access to any content. I did this for simplicity mostly but also wanted it to function with sign up/sign in requirements.
 
 
@@ -72,6 +74,9 @@ The app is designed so that only users have access to any content. I did this fo
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+##Planning Material
+
+Planning:[https://trello.com/b/SQbJNLz6/unit-2-project-ga](https://trello.com/b/SQbJNLz6/unit-2-project-ga)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
